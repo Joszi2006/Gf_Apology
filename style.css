@@ -273,6 +273,7 @@ h2 {
 
 input, select {
     width: 100%;
+    box-sizing: border-box;
     padding: 14px;
     margin-top: 10px;
     border-radius: 15px;
