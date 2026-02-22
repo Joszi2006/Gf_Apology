@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+<source src="assets/song.mp3">
+</audio>
+
+<!-- ===== SCENE 0: Intro ===== -->
+<div class="scene active" id="scene-0">
+<div class="scene-content">
+
+  <div class="bear-gif tenor-gif-embed"
+       data-postid="24166045"
+       data-share-method="host"
+       data-aspect-ratio="1.09966"
+       data-width="100%">
+    <a href="https://tenor.com/view/milk-and-mocha-cry-sad-gif-24166045">Milk And GIF</a>
+    from <a href="https://tenor.com/search/milk-gifs">Milk GIFs</a>
+  </div>
+
+  <h1>Hey Mama ❤️</h1>
+  <p id="typingText"></p>
+  <button id="openLetterBtn" class="hidden">Open My Letter ❤️</button>
+
+</div>
+</div>
+
+<!-- ===== SCENE 1: Envelope + Forgiveness Question ===== -->
+<div class="scene" id="scene-1">
+<div class="scene-content">
+
+  <div id="envelopeScene">
+  <div id="envelope3D" class="envelope3d">
+
+    <!-- Flap — rotates open in 3D -->
+    <div class="env-flap"></div>
+
+    <!-- Envelope body — paper lives INSIDE here -->
+    <div class="env-body">
+      <div class="env-fold-left"></div>
+      <div class="env-fold-right"></div>
+      <div class="env-fold-bottom"></div>
+
+      <!-- Letter paper — inside the envelope -->
+      <div class="envelope-paper">
+        <p id="letter"></p>
+      </div>
+    </div>
+
+    <!-- Heart seal on the flap -->
+    <div class="env-seal">💌</div>
+
+  </div>
+  </div>
+
+  <!-- Forgiveness question — appears in same scene after letter is read -->
+  <div class="glass-box hidden" id="questionBox">
+  <h2>After reading the letter</h2>
+  <p>Do you forgive me? ❤️</p>
+  <div class="decision-box">
+    <button id="yesBtn">Yes ❤️</button>
+    <button id="noBtn">No</button>
+  </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== SCENE 2: Plan a Date ===== -->
+<div class="scene" id="scene-2">
+<div class="scene-content">
+
+  <div class="glass-box">
+  <h2>Plan Our Date ❤️</h2>
+  <label>Choose Date</label>
+  <input type="date" id="dateChoice">
+  <label>Preferred Time</label>
+  <select id="timeChoice">
+    <option>Afternoon</option>
+    <option>Evening</option>
+    <option>Flexible</option>
+  </select>
+  <button id="forgiveBtn">Confirm Date ❤️</button>
+  </div>
+
+</div>
+</div>
+
+<!-- ===== SCENE 3: Happy Ending ===== -->
+<div class="scene" id="scene-3">
+<div class="scene-content">
+
+  <div class="tenor-gif-embed"
+       data-postid="12815241424229139678"
+       data-width="50%" style="align-self: center;">
+  </div>
+
+  <h2>Thank you ❤️</h2>
+  <p id="dateResult"></p>
+  <a id="calendarLink" class="calendar-soft" target="_blank"></a>
+
+</div>
+</div>
+
+<!-- Single shared Tenor script -->
+<script async src="https://tenor.com/embed.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
