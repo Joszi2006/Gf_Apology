@@ -348,6 +348,16 @@ button:hover {
     animation: fadeInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* ===== DATE RESULT ===== */
+
+#dateResult {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    margin: 12px 0 4px;
+    white-space: pre-line;
+    line-height: 1.7;
+}
+
 /* ===== CALENDAR LINK ===== */
 
 .calendar-soft {

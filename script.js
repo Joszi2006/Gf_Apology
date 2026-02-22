@@ -1,3 +1,12 @@
+/* ===== EMAILJS CONFIG — fill these in after setup ===== */
+const EMAILJS_PUBLIC_KEY  = 'p-1G0QQbLh9uE2Fqc';
+const EMAILJS_SERVICE_ID  = 'service_d5mr5u8';
+const EMAILJS_TEMPLATE_ID = 'template_t0f8s3d';
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+/* ===================================================== */
+
 const openingMessage =
 "I want to sincerely apologize for misunderstanding you ";
 
@@ -134,7 +143,13 @@ document.getElementById('forgiveBtn').addEventListener('click', () => {
     }
 
     document.getElementById('dateResult').innerText =
-        `You picked ${date} — ${time} ❤️`;
+        `${date} — ${time} ❤️`;
+
+    /* Send email notification via EmailJS */
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        picked_date: date,
+        picked_time: time,
+    }).catch(() => {}); /* silently ignore if not configured yet */
 
     const calendarLink = document.getElementById('calendarLink');
     const eventText    = 'Our Date ❤️';
